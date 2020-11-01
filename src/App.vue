@@ -28,3 +28,18 @@
   color: #42b983;
 }
 </style>
+<template>
+  <div>
+     <p>我的内容是</p>
+  </div>
+</template>
+
+<script>
+  export default {
+    
+  }
+</script>
+
+<style scoped>
+/* @import "" */
+</style>
