@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import TabBar from "./TabBar";
-import TabBarItem from "./TabBarItem";
+import TabBar from "../common/tabbar/TabBar";
+import TabBarItem from "../common/tabbar/TabBarItem";
 
 export default {
   data() {
     return {
-      defaultImgUrl: require("@/assets/img/tabbar/tabbar_me@2x.png"),
-      hilightImgUrl: require("@/assets/img/tabbar/tabbar_me_highLight@2x.png")
+      defaultImgUrl: require("@/assets/img/tabbar/tb_0_0.pdf"),
+      hilightImgUrl: require("@/assets/img/tabbar/tb_0_1.pdf")
     };
   },
   components: {
