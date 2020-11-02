@@ -4,23 +4,41 @@
       购物车
     </template>
   </NavBar>
+  <HomeSwiper :banners="banners" />
 </template>
 
 <script>
-import NavBar from "components/common/navbar/NavBar.vue";
-import { getMultiData } from "network/home.js";
+import { getMultiData } from "network/home";
+
+import NavBar from "components/common/navbar/NavBar";
+import HomeSwiper from "./childComps/HomeSwiper";
 export default {
+  data() {
+    return {
+      banners: []
+      // dKeyWord:Object,
+      // keyWords:Object,
+      // recommend:Object
+    };
+  },
   created() {
     getMultiData()
       .then(result => {
-        console.log(result);
+        // 注意this;注意这里有一层data
+        let res = result.data.data;
+        this.banners = res.banner.list;
+
+        // this.dKeyword = result.data.dKeyword;
+        // this.keywords = result.data.keywords;
+        // this.recommend = result.data.recommend;
       })
       .catch(err => {
         console.log(err);
       });
   },
   components: {
-    NavBar
+    NavBar,
+    HomeSwiper
   }
 };
 </script>

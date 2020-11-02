@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <keep-alive>
-         <router-view />
-    </keep-alive>
+    <router-view v-slot="{ Component }">
+      <keep-alive>
+        <component :is="Component" />
+      </keep-alive>
+    </router-view>
     <MainTabBar />
   </div>
 </template>
 
 <script>
-import MainTabBar from "components/content/MainTabBar.vue";
+import MainTabBar from "components/content/MainTabBar";
 export default {
   components: {
     MainTabBar
