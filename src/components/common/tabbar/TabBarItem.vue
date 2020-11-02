@@ -73,12 +73,12 @@ export default {
 /* img 是行内块元素 */
 .tab-bar-item img {
   height: 25px;
-  margin-bottom: -7px;
+  margin-bottom: -4px;
 }
 
 .tab-bar-item div {
   /* margin-top: 0px; */
-  width: 100px;
+  /* width: 100px; */
   margin: auto;
 }
 </style>

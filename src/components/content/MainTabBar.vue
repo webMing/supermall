@@ -9,14 +9,14 @@
     ></TabBarItem>
     <TabBarItem
       :normalImgUrl="categoryImgUrl"
-      :hilightImgUrl="cotegoryHiImgUrl"
+      :hilightImgUrl="categoryHiImgUrl"
       path="/category"
       titleHiLightColor="green"
       title="分类"
     ></TabBarItem>
     <TabBarItem
       :normalImgUrl="cartImgUrl"
-      :hilightImgUrl="cartImgUrl"
+      :hilightImgUrl="cartHiImgUrl"
       path="/cart"
       titleHiLightColor="green"
       title="购物车"
@@ -42,7 +42,7 @@ export default {
       homeImgUrl: require("@/assets/img/tabbar/home.png"),
       homeHiImgUrl: require("@/assets/img/tabbar/home_hi.png"),
       categoryImgUrl: require("@/assets/img/tabbar/category.png"),
-      cotegoryHiImgUrl: require("@/assets/img/tabbar/category_hi.png"),
+      categoryHiImgUrl: require("@/assets/img/tabbar/category_hi.png"),
       cartImgUrl: require("@/assets/img/tabbar/cart.png"),
       cartHiImgUrl: require("@/assets/img/tabbar/cart_hi.png"),
       meImgUrl: require("@/assets/img/tabbar/me.png"),
