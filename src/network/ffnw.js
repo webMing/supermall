@@ -39,7 +39,7 @@ function get(
   return ax(para);
 }
 /**POST */
-export function post(para) {
+function post(para) {
   const ax = axios.create({
     baseURL: "http://123.207.32.32:8000",
     method: "POST",

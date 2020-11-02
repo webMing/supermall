@@ -8,23 +8,26 @@
 
 <script>
 import NavBar from "components/common/navbar/NavBar.vue";
-// import {ffnw} from "network/ffnw.js"
+import { getMultiData } from "network/home.js";
 export default {
-  created(){
-    // ffnw.get({
-    //   url:"home",
-    // })    
+  created() {
+    getMultiData()
+      .then(result => {
+        console.log(result);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   },
   components: {
     NavBar
   }
 };
-
 </script>
 
 <style scoped>
 .home-nav {
   background-color: green;
-  color:white
+  color: white;
 }
 </style>
