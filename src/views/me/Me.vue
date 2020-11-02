@@ -1,13 +1,9 @@
 <template>
-<p>Me Page</p>
+  <p>Me Page</p>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

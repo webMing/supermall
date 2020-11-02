@@ -10,21 +10,18 @@ const routes = [
   {
     path: "/category",
     name: "Category",
-    component: () =>
-      import("views/category/Category.vue")
+    component: () => import("views/category/Category.vue")
   },
   {
     path: "/cart",
     name: "Cart",
-    component: () =>
-      import("views/cart/Cart.vue")
+    component: () => import("views/cart/Cart.vue")
   },
   {
     path: "/me",
     name: "Me",
-    component: () =>
-      import("views/me/Me.vue")
-  },
+    component: () => import("views/me/Me.vue")
+  }
 ];
 
 const router = createRouter({

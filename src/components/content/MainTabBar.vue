@@ -28,7 +28,6 @@
       titleHiLightColor="green"
       title="我"
     ></TabBarItem>
-
   </TabBar>
 </template>
 
@@ -46,7 +45,7 @@ export default {
       cartImgUrl: require("@/assets/img/tabbar/cart.png"),
       cartHiImgUrl: require("@/assets/img/tabbar/cart_hi.png"),
       meImgUrl: require("@/assets/img/tabbar/me.png"),
-      meHiImgUrl: require("@/assets/img/tabbar/me_hi.png"),
+      meHiImgUrl: require("@/assets/img/tabbar/me_hi.png")
     };
   },
   components: {
