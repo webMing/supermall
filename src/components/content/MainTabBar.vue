@@ -1,19 +1,34 @@
 <template>
   <TabBar>
     <TabBarItem
-      :normalImgUrl="defaultImgUrl"
-      :hilightImgUrl="hilightImgUrl"
-      titleHiLightColor="red"
-      path="/me"
-      title="我的"
+      :normalImgUrl="homeImgUrl"
+      :hilightImgUrl="homeHiImgUrl"
+      titleHiLightColor="green"
+      path="/home"
+      title="首页"
     ></TabBarItem>
     <TabBarItem
-      :normalImgUrl="defaultImgUrl"
-      :hilightImgUrl="hilightImgUrl"
+      :normalImgUrl="categoryImgUrl"
+      :hilightImgUrl="cotegoryHiImgUrl"
       path="/category"
-      titleHiLightColor="red"
+      titleHiLightColor="green"
       title="分类"
     ></TabBarItem>
+    <TabBarItem
+      :normalImgUrl="cartImgUrl"
+      :hilightImgUrl="cartImgUrl"
+      path="/cart"
+      titleHiLightColor="green"
+      title="购物车"
+    ></TabBarItem>
+    <TabBarItem
+      :normalImgUrl="meImgUrl"
+      :hilightImgUrl="meHiImgUrl"
+      path="/me"
+      titleHiLightColor="green"
+      title="我"
+    ></TabBarItem>
+
   </TabBar>
 </template>
 
@@ -24,8 +39,14 @@ import TabBarItem from "../common/tabbar/TabBarItem";
 export default {
   data() {
     return {
-      defaultImgUrl: require("@/assets/img/tabbar/tb_0_0.pdf"),
-      hilightImgUrl: require("@/assets/img/tabbar/tb_0_1.pdf")
+      homeImgUrl: require("@/assets/img/tabbar/home.png"),
+      homeHiImgUrl: require("@/assets/img/tabbar/home_hi.png"),
+      categoryImgUrl: require("@/assets/img/tabbar/category.png"),
+      cotegoryHiImgUrl: require("@/assets/img/tabbar/category_hi.png"),
+      cartImgUrl: require("@/assets/img/tabbar/cart.png"),
+      cartHiImgUrl: require("@/assets/img/tabbar/cart_hi.png"),
+      meImgUrl: require("@/assets/img/tabbar/me.png"),
+      meHiImgUrl: require("@/assets/img/tabbar/me_hi.png"),
     };
   },
   components: {
