@@ -13,7 +13,7 @@ module.exports = {
       .set("views", "@/views");
     config.plugin("html").tap(args => {
       args[0].title = "风范工厂";
-      // args[0].template = '/Users/username/proj/app/templates/index.html' 
+      // args[0].template = '/Users/username/proj/app/templates/index.html'
       // https://cli.vuejs.org/guide/webpack.html#modifying-options-of-a-plugin
       return args;
     });

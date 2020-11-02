@@ -1,10 +1,10 @@
 /**
- * qtnw: Qing Tian NetWork
+ * ffnw: Feng Fan NetWork
  */
 
 import axios from "axios";
 /**GET  */
-export function get(
+function get(
   para,
   handRequestConfig,
   handRequestError,
@@ -48,8 +48,8 @@ export function post(para) {
   return ax({ data: para });
 }
 
-const qtnw = {
+const ffnw = {
   get,
   post
 };
-export default qtnw;
+export default ffnw;

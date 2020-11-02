@@ -1,9 +1,30 @@
 <template>
-  <p>This is Home Page</p>
+  <NavBar class="home-nav">
+    <template v-slot:center>
+      购物车
+    </template>
+  </NavBar>
 </template>
 
 <script>
-export default {};
+import NavBar from "components/common/navbar/NavBar.vue";
+// import {ffnw} from "network/ffnw.js"
+export default {
+  created(){
+    // ffnw.get({
+    //   url:"home",
+    // })    
+  },
+  components: {
+    NavBar
+  }
+};
+
 </script>
 
-<style scoped></style>
+<style scoped>
+.home-nav {
+  background-color: green;
+  color:white
+}
+</style>

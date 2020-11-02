@@ -26,7 +26,7 @@
       :hilightImgUrl="meHiImgUrl"
       path="/me"
       titleHiLightColor="green"
-      title="我"
+      title="我的"
     ></TabBarItem>
   </TabBar>
 </template>
