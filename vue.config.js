@@ -17,5 +17,9 @@ module.exports = {
       // https://cli.vuejs.org/guide/webpack.html#modifying-options-of-a-plugin
       return args;
     });
+  },
+  devServer: {
+    open: true,
+    port: 8081
   }
 };

@@ -5,6 +5,7 @@
     </template>
   </NavBar>
   <HomeSwiper :banners="banners" />
+  <HomeRecommend :recommend="recommend" class="home-recommend"/>
 </template>
 
 <script>
@@ -12,13 +13,14 @@ import { getMultiData } from "network/home";
 
 import NavBar from "components/common/navbar/NavBar";
 import HomeSwiper from "./childComps/HomeSwiper";
+import HomeRecommend from "./childComps/HomeRecommend";
 export default {
   data() {
     return {
-      banners: []
+      banners: [],
       // dKeyWord:Object,
       // keyWords:Object,
-      // recommend:Object
+      recommend: []
     };
   },
   created() {
@@ -27,10 +29,10 @@ export default {
         // 注意this;注意这里有一层data
         let res = result.data.data;
         this.banners = res.banner.list;
+        this.recommend = res.recommend.list;
 
         // this.dKeyword = result.data.dKeyword;
         // this.keywords = result.data.keywords;
-        // this.recommend = result.data.recommend;
       })
       .catch(err => {
         console.log(err);
@@ -38,7 +40,8 @@ export default {
   },
   components: {
     NavBar,
-    HomeSwiper
+    HomeSwiper,
+    HomeRecommend
   }
 };
 </script>
@@ -47,5 +50,8 @@ export default {
 .home-nav {
   background-color: green;
   color: white;
+}
+.home-recommend {
+  width: 100%;
 }
 </style>
