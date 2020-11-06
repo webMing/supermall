@@ -1,7 +1,7 @@
 <template>
   <div class="tab-control">
-     <div v-for="(title,index) in titles" :key="title">
-        <span :style="{color:textColor(index)}" >{{title}}</span>
+     <div v-for="(title,index) in titles" :key="title" @click="changeSelect(index)">
+        <span :style="currentIndex === index?hiStyle:deStyle" >{{title}}</span>
      </div>
   </div>
 </template>
@@ -10,7 +10,15 @@
 export default {
     data(){
         return {
-            currentIndex:0
+            currentIndex:0,
+            hiStyle:{
+                color:this.hilightColor,
+                "border-bottom":"2px solid " + this.hilightColor
+            },
+            deStyle:{
+                color:this.defaultColor,
+                "border-bottom":"none"
+            }
         }
     },
     props:{
@@ -30,12 +38,12 @@ export default {
         }
     },
     methods:{
-        textColor(index){
-            return this.currentIndex === index ? this.hilightColor : this.defaultColor
-        }
+        changeSelect(index){
+            this.currentIndex = index
+        },
     },
     computed:{
-        
+       
     }
 }
 </script>
@@ -46,5 +54,10 @@ export default {
 }
 .tab-control div {
     flex: 1;
+    text-align: center;
 }
+.tab-control span {
+    padding-bottom: 5px;
+}
+
 </style>
