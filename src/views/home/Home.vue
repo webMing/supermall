@@ -1,28 +1,56 @@
 <template>
   <div class="home">
-  <NavBar class="home-nav">
-    <template v-slot:center>
-      购物车
-    </template>
-  </NavBar>
-  <HomeSwiper :banners="banners" />
-  <HomeRecommend :recommend="recommend" class="home-recommend"/>
-  <HomeFeture/>
-
-  <HomeTabControl :titles="tabControlTitles"/>
-
-  <ul>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-  </ul>
+    <NavBar class="home-nav">
+      <template v-slot:center>
+        购物车
+      </template>
+    </NavBar>
+    <HomeSwiper :banners="banners" />
+    <HomeRecommend :recommend="recommend" class="home-recommend" />
+    <HomeFeture />
+    <HomeGoods/>
+    <ul>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+    </ul>
   </div>
 </template>
 
@@ -33,7 +61,7 @@ import NavBar from "components/common/navbar/NavBar";
 import HomeSwiper from "./childComps/HomeSwiper";
 import HomeRecommend from "./childComps/HomeRecommend";
 import HomeFeture from "./childComps/HomeFeature";
-import HomeTabControl from "components/common/tabControl/TabControl"
+import HomeGoods from "./childComps/HomeGoods";
 
 export default {
   data() {
@@ -42,7 +70,7 @@ export default {
       // dKeyWord:Object,
       // keyWords:Object,
       recommend: [],
-      tabControlTitles:["分类","我的","制作"]
+      
     };
   },
   created() {
@@ -65,7 +93,7 @@ export default {
     HomeSwiper,
     HomeRecommend,
     HomeFeture,
-    HomeTabControl,
+    HomeGoods,
   }
 };
 </script>
@@ -81,11 +109,9 @@ export default {
   right: 0px;
 
   z-index: 9;
-  
+
   background-color: green;
   color: white;
 }
-.home-recommend {
-  width: 100%;
-}
+
 </style>

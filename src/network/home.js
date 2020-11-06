@@ -4,3 +4,13 @@ export function getMultiData() {
     url: "/home/multidata"
   });
 }
+
+export function getHomeGoods(type,page){
+  return ffnw.get({
+    url: "/home/data",
+    params:{
+     type,
+     page
+    }
+  });
+}

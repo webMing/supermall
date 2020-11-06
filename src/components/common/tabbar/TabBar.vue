@@ -11,7 +11,7 @@ export default {};
 <style scoped>
 .tab-bar {
   display: flex;
-  
+
   position: fixed;
   left: 0;
   right: 0;
