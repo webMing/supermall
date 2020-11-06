@@ -5,7 +5,7 @@
         <component :is="Component" />
       </keep-alive>
     </router-view>
-    <MainTabBar />
+    <MainTabBar/>
   </div>
 </template>
 
@@ -21,4 +21,5 @@ export default {
 <style scoped>
 @import "assets/css/base.css";
 /* @import "assets/css/normalize.css"; */
+
 </style>
